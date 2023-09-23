@@ -1,14 +1,14 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-// Example deployed to Sepolia: 0xfaA5B7490eD99f2364784103EC00ebE39C5a8E52
+// Example deployed to Sepolia: 0x6bC0b90706dD4D0fc5e09FBD2D9ecC8b7B766323
 
 contract BuyMeACoffee {
     // Event to emit when a Memo is created.
     event NewMemo(
         address indexed from,
         uint256 timestamp,
-        uint256 donatedAmount,
+        uint256 amount,
         string name,
         string message
     );
@@ -17,7 +17,7 @@ contract BuyMeACoffee {
     struct Memo {
         address from;
         uint256 timestamp;
-        uint256 donatedAmount;
+        uint256 amount;
         string name;
         string message;
     }
